@@ -1,0 +1,104 @@
+//1. Differnece b/w (var-let-const)
+//ES5 -> var (function() scoped hota hai)
+function abcd(){
+    for(var i=0; i<=10; i++){
+        console.log(i);
+    }
+    console.log(i);
+}
+
+abcd();
+
+//ES6 -> let const (Braces {} scoped hota hai)
+function b(){
+    for(let i=0; i<=10; i++){
+        console.log(i);
+    }
+    // console.log(i)  -> Error!!
+}
+
+b()
+
+//2.browser context-api
+//Browser gives -> window stack heap-memory
+
+//3.Execution Context -> jab bhi ham function() chalayege function khud ka ek imaginary container bna lega jismein uski teen cheeze hogi :
+    //1.variables
+    //2.function inside that parent function()
+    //3.Lexical environment -> yeh bta ta hai ki function ki cheejo ko acces kar skata hai ki nahi !
+
+//4.How to copy Refrence Values 
+var arr  = [1,2,3,4,5];
+var arr2 = [...arr]
+arr2.pop();
+
+console.log(arr2);
+
+var obj = {
+    name:"harsh",
+    age:"23"
+}
+var obj2 = {...obj}
+obj2.age="12"
+
+console.log(obj2);
+
+//5. Falsy Values  -> 0 false undefined null NaN document.all
+//   Truthy Values -> Except all [Truthy] Values
+
+if(-22){
+    console.log("if is executed !");
+}
+else{
+    console.log("else is executed !");
+}
+
+//For Loops ->
+    //1.ForEach 2.ForIn 3.doWhile
+
+    //1.forEach loop -> Jab bhi aap pe array ho use forEach loop
+    //  forEach does not change value's in your default array so default array is always unchanged ! 
+    var a=[1,2,3,44,14,214,421,42]
+
+    a.forEach(function(val){
+        console.log(val+2);
+    });
+
+    //2.forIn -> objects par loop karne k liye use hota hai forin loop
+    var obj1 ={
+        name:"harsh",
+        city:"bhopal",
+        age:21
+    }
+
+    for(var key in obj1){
+        console.log(key,obj[key]);
+    }
+
+//6.Callback function()
+//-> jab bhi koi aisa code jo baad me chalta hai aap likhoge kyu ki voh baaad me chalta hai js ko ye pata nhi hota hai ke wo complete hua ya nahi , asie code k completeion par js ko btay ajaata hai ke wo complete hogya hai aap use chalata sakte hai , yeh btane k liye callback fn() use hota h !
+setTimeout(function(){
+    console.log("2 second k baad chalna !");
+},2000)
+
+//7.what is first class Functions ?
+//-> js mein ek concept hai jiska mtlb hota hai ki aap fnc ko use kar sakte ho as a value 
+var a = function(){
+    console.log('hello harsh golu ');
+};
+
+a();
+
+//How arrays are made behind the scenes ?
+//Array are not real array -> They are Objects
+var arr = [2,3,4,5];
+console.log(arr[-1]);
+
+//Delete Properties in obj2 ->
+var obj2={
+    name:"harsh",
+    age:21
+}
+
+delete obj2.age;
+console.log(obj2);
