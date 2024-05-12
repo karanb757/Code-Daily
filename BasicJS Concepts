@@ -1,0 +1,41 @@
+//1. Var let const ->
+// var   -> var are variables to store data wheter alphabets numbers boolean that can be changed !!
+var a="hello"
+console.log(a);
+// let   -> let keyword is improved version of var keyword introduced in (ES6). A variable declared in a block with let is only available for use within that block it cant be redeclared out of scope()
+let pageNum=10;
+console.log(page)
+// const -> const are constants that cant be changed once declared !!
+const c=102;
+console.log(c);
+// c=103 //NOT POSSIBLE !!
+
+//2. Hoisting ->
+// Hoisting is a JavaScript mechanism where function declarations and variable declarations are moved to the top of their scope before code execution.
+// This means that functions() and variables can be used before they are declared.
+// Here is an example of hoisting:
+
+console.log(b); //undefined
+var b= 120;
+
+//3. Data types in JS ->
+//Primitive     -> Num Var String Bool Null Undefined Symbol BigInt
+//Non-Primitive -> object Array 
+
+//4. Conditionals
+//if 
+//else if
+//else 
+
+//5. Loops
+//A.for 
+//B.While 
+
+//6.Functions()
+
+//7.parameters & arguments
+
+//8.Array
+
+// 1:08:33 Push pop shift unshift
+// 1:11:23 Objects
